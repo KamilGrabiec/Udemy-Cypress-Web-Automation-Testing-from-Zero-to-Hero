@@ -15,6 +15,7 @@ describe("Lesson 11, Finding web elements", () => {
       .should("contain", "Sign in");
 
     cy.get("#inputEmail3").parents("form").find(".custom-checkbox").click();
+
     cy.get("#inputEmail3")
       .parents("form")
       .find(".custom-checkbox")
