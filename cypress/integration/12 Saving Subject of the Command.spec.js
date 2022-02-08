@@ -1,7 +1,5 @@
 /// <reference types = "cypress" />
 
-const { first } = require("rxjs-compat/operator/first");
-
 describe("Saving data", () => {
   it.only("then and wrap methods", () => {
     cy.visit("/");
