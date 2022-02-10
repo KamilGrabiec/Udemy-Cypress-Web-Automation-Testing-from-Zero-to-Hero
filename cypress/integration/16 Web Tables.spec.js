@@ -1,10 +1,11 @@
 /// <reference types='Cypress' />
 
+import { navigateTo } from "../support/page_objects/navigationPage";
+
 describe("Web Tables", () => {
   it("Web Table", () => {
     cy.visit("/");
-    cy.contains("Tables & Data").click();
-    cy.contains("Smart Table").click();
+    navigateTo.smartTablePage();
 
     //1
     cy.get("tbody")

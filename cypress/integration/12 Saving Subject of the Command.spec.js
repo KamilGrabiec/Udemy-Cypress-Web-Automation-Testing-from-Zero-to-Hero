@@ -1,10 +1,11 @@
 /// <reference types = "cypress" />
 
+import { navigateTo } from "../support/page_objects/navigationPage";
+
 describe("Saving data", () => {
   it.only("then and wrap methods", () => {
     cy.visit("/");
-    cy.contains("Forms").click();
-    cy.contains("Form Layout").click();
+    navigateTo.formLayoutsPage();
 
     cy.contains("nb-card", "Using the Grid")
       .find('[for="inputEmail1"]')

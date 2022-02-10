@@ -1,10 +1,11 @@
 /// <reference types = "cypress" />
 
+import { navigateTo } from "../support/page_objects/navigationPage";
+
 describe("Checkboxes and radio buttons", () => {
   it("Radio buttons", () => {
     cy.visit("/");
-    cy.contains("Forms").click();
-    cy.contains("Form Layouts").click();
+    navigateTo.formLayoutsPage();
 
     cy.contains("nb-card", "Using the Grid")
       .find('[type="radio"]')

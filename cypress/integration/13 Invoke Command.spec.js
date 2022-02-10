@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 
 const { equal } = require("assert");
+const { navigateTo } = require("../support/page_objects/navigationPage");
 
 describe("Invoke Command", () => {
   it("Invoke Command", () => {
     cy.visit("/");
-    cy.contains("Forms").click();
-    cy.contains("Form Layout").click();
+    navigateTo.formLayoutsPage();
 
     //1
     cy.get('[for="exampleInputEmail1"]').should("contain", "Email address");
